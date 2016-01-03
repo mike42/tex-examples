@@ -1,12 +1,12 @@
-EXAMPLES = 2x1
+latex=xelatex --interaction=nonstopmode
 
-default:
-	for dir in $(EXAMPLES); do \
-		(cd $$dir && ${MAKE}); \
-	done
+default: book-print-2x1.pdf book-print-2x2.pdf book-print-1x1.pdf
+
+book-print-%.pdf: book-print-%.tex book-pages.pdf
+	$(latex) $<
+
+book-pages.pdf: book-pages.tex
+	$(latex) book-pages.tex
 
 clean:
-	for dir in $(EXAMPLES); do \
-		(cd $$dir && ${MAKE} clean); \
-	done
-
+	rm *.log *.aux *.pdf
