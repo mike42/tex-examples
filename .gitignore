@@ -1,2 +1,4 @@
 # LaTeX files:
 */clutter/*
+*.log
+*.aux
