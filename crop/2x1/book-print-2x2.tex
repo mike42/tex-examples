@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{pdfpages}
+% Sum of dimensions of the pages. We are displaying 2x2 C6 (114 mm x 162mm) pages, which is where 228x324 comes from.
+\usepackage[paperheight=324mm,paperwidth=228mm]{geometry}
+
+% Include print/output paper size and orientation here, A3 portrait in this example (use 'landscape' option for landscape)
+\usepackage[axes,cam,a3,pdftex,center]{crop}
+
+\begin{document}
+
+% Restrict page range, and set arrangement of pages per sheet here.
+\includepdf[pages=-,nup=2x2,noautoscale]{book-pages.pdf}
+
+\end{document}
+

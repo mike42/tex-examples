@@ -1,0 +1,15 @@
+\documentclass{article}
+\usepackage{pdfpages}
+% Sum of dimensions of the pages. We are displaying 1x1 C6 (114 mm x 162mm) pages, which is where 114x162 comes from.
+\usepackage[paperheight=162mm,paperwidth=114mm]{geometry}
+
+% Include print/output paper size and orientation here, A4 portrait in this example (use 'landscape' option for landscape)
+\usepackage[axes,cam,a4,pdftex,center]{crop}
+
+\begin{document}
+
+% Restrict page range, and set arrangement of pages per sheet here.
+\includepdf[pages=-,nup=1x1,noautoscale]{book-pages.pdf}
+
+\end{document}
+
