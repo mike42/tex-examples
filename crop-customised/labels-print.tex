@@ -1,0 +1,17 @@
+\documentclass{article}
+% This file demonstrates the use of a customisation to the 'crop' package to render additional axes for cutting up small name labels.
+
+\usepackage{pdfpages}
+% Sum of dimensions of the pages. We are displaying 3x7 small tags (60 x 30 mm) to a page, which is where 180x210 comes from.
+\usepackage[paperheight=210mm,paperwidth=180mm]{geometry}
+
+% Include print/output paper size and orientation here, A3 portrait in this example (use 'landscape' option for landscape)
+\usepackage[axes,cam,a4,pdftex,center]{crop-3x7}
+
+\begin{document}
+
+% Restrict page range, and set arrangement of pages per sheet here.
+\includepdf[pages=-,nup=3x7,noautoscale]{labels.pdf}
+
+\end{document}
+
