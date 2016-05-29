@@ -1,7 +1,7 @@
-tex-examples
+TeX Examples
 ============
 
-Random snippets of tex.
+Random snippets of TeX.
 
 ## Contributing
 
